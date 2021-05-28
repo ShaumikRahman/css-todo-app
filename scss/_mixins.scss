@@ -1,0 +1,7 @@
+$breakpoints-down: ("mobile": "23.4375em", "desktop": "90em");
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoints-down, $size)) {
+        @content;
+    }
+}
