@@ -1,6 +1,6 @@
 .header {
 
-    @include breakpoint-down(mobile) {
+    @include breakpoint-down(small) {
         height: 12rem;
         background-size: 380%;
     }
