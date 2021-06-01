@@ -22,7 +22,7 @@
     ></header>
     <main class="content">
       <div class="content-title">
-        <h1 class="title">TODO</h1>
+        <h1>TODO</h1>
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
           <path
             fill="#FFF"
@@ -33,38 +33,73 @@
       </div>
       <div class="content-search">
         <button class="check">
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
+            <path
+              fill="none"
+              stroke="#FFF"
+              stroke-width="2"
+              d="M1 4.304L3.696 7l6-6"
+            />
+          </svg>
         </button>
-        <input type="text" class="search" placeholder="Create a new todo...">
+        <input type="text" class="search" placeholder="Create a new todo..." />
       </div>
-      <div class="content-list">
-        <div class="todo">
-          <button class="todo-check">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
-          </button>
-          <p class="todo-text">test</p>
+      <div class="main-wrapper">
+        <div class="content-list">
+          <div class="todo">
+            <button class="todo-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
+                <path
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="2"
+                  d="M1 4.304L3.696 7l6-6"
+                />
+              </svg>
+            </button>
+            <p class="todo-text">test</p>
+          </div>
+          <div class="todo">
+            <button class="todo-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
+                <path
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="2"
+                  d="M1 4.304L3.696 7l6-6"
+                />
+              </svg>
+            </button>
+            <p class="todo-text">test</p>
+          </div>
+          <div class="todo">
+            <button class="todo-check">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
+                <path
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="2"
+                  d="M1 4.304L3.696 7l6-6"
+                />
+              </svg>
+            </button>
+            <p class="todo-text">test</p>
+          </div>
         </div>
-        <div class="todo">
-          <button class="todo-check">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
-          </button>
-          <p class="todo-text">test</p>
-        </div>
-        <div class="todo">
-          <button class="todo-check">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
-          </button>
-          <p class="todo-text">test</p>
-        </div>
-      </div>
-      <div class="content-tracker">
-        <div class="tracker">
+        <div class="todo-tracker">
           <p class="remaining">5 Items left</p>
-          <button class="tracker-button">All</button>
-          <button class="tracker-button">Active</button>
-          <button class="tracker-button">Completed</button>
-          <button class="tracker-button">Clear Completed</button>
+          <div class="buttons">
+            <button class="tracker-button active">All</button>
+            <button class="tracker-button">Active</button>
+            <button class="tracker-button">Completed</button>
+          </div>
+          <button class="clear">Clear Completed</button>
         </div>
+      </div>
+      <div class="alt-buttons">
+        <button class="tracker-button active">All</button>
+        <button class="tracker-button">Active</button>
+        <button class="tracker-button">Completed</button>
       </div>
       <div class="content-tip">
         <p class="tip-text">Drag and Drop to reorder list</p>

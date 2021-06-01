@@ -4,7 +4,7 @@ main {
     width: 62.75%;
   }
 
-  @include breakpoint-down(small) {
+  @include breakpoint-down(xsmall) {
     top: 2.8125rem;
     width: 87.5%;
   }
@@ -52,7 +52,8 @@ main {
         opacity: 1;
       }
 
-      &:active, .checked {
+      &:active,
+      .checked {
         background: linear-gradient(
           135deg,
           hsl(192, 100%, 67%),
@@ -73,51 +74,140 @@ main {
     }
   }
 
+  .main-wrapper {
+    box-shadow: 0px 4px 2rem 0px rgba(0, 0, 0, 0.15);
+    border-radius: 0.375rem;
+  }
+
   .content-list {
     width: 100%;
-    margin-top: .75rem;
+    margin-top: 0.75rem;
     background-color: $Very-Light-Gray;
     border-radius: 0.375rem;
 
     .todo {
-        padding: .6875rem 0px;
+      padding: 0.6875rem 0px;
+      border-bottom: 0.25px solid #484b6a2b;
 
-        .todo-check {
-            position: absolute;
-            background-color: $Very-Light-Gray;
-            margin-left: 0.875rem;
-            border-radius: 0.75rem;
-            border-width: 1px;
-            border-color: $Dark-Grayish-Blue;
-            border-style: solid;
-            width: 1rem;
-            height: 1rem;
-            opacity: 0.33;
-            cursor: pointer;
-            transition: all 100ms ease-in-out;
-      
-            &:hover {
-              opacity: 1;
-            }
-      
-            &:active, .checked {
-              background: linear-gradient(
-                135deg,
-                hsl(192, 100%, 67%),
-                hsl(280, 87%, 65%)
-              );
-              opacity: 1;
-            }
-          }
+      .todo-check {
+        position: absolute;
+        background-color: $Very-Light-Gray;
+        margin-left: 0.875rem;
+        border-radius: 0.75rem;
+        border-width: 1px;
+        border-color: $Dark-Grayish-Blue;
+        border-style: solid;
+        width: 1rem;
+        height: 1rem;
+        opacity: 0.33;
+        cursor: pointer;
+        transition: all 100ms ease-in-out;
 
-          p {
-              margin-left: 3rem;
-              word-wrap: break-word;
-          }
+        &:hover {
+          opacity: 1;
+        }
+
+        &:active,
+        .checked {
+          background: linear-gradient(
+            135deg,
+            hsl(192, 100%, 67%),
+            hsl(280, 87%, 65%)
+          );
+          opacity: 1;
+        }
+      }
+
+      p {
+        margin-left: 3rem;
+        word-wrap: break-word;
+        cursor: pointer;
+        display: inline-block;
+      }
+    }
+  }
+
+  .todo-tracker {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $Very-Light-Gray;
+    padding: 0.5rem 0;
+    margin-bottom: 0.75rem;
+    border-radius: 0.375rem;
+
+    & button {
+      opacity: 0.75;
+      transition: opacity 100ms ease-in-out;
+      border-radius: 100px;
     }
 
-    .todo:not(:last-child) {
-        border-bottom: .25px solid #484b6a2b;
+    & button:hover {
+      opacity: 1;
+    }
+
+    .remaining {
+      font-size: 0.66rem;
+      transition: all 100ms ease-in-out;
+    }
+
+    .buttons {
+      @include breakpoint-down(small) {
+        display: none;
+      }
+
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+
+      .tracker-button {
+        margin: 0 1px;
+        font-family: $Josefin-Sans;
+        font-size: 0.66rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        &.active {
+          color: $bright-blue;
+        }
+      }
+    }
+
+    .clear {
+      font-family: $Josefin-Sans;
+      font-size: 0.66rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .alt-buttons {
+    @include breakpoint-up(small) {
+        display: none;
+      }
+      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    background-color: $Very-Light-Gray;
+    padding: 0.5rem 0;
+    border-radius: 0.375rem;
+    box-shadow: 0px 4px 2rem 0px rgba(0, 0, 0, 0.15);
+
+    .tracker-button {
+      margin: 0 1px;
+      font-family: $Josefin-Sans;
+      font-size: 0.66rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      &.active {
+        color: $bright-blue;
+      }
     }
   }
 }
