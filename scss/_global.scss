@@ -1,3 +1,5 @@
+$radius-value: 0.375rem;
+
 * {
     margin: 0;
     padding: 0;
@@ -9,4 +11,9 @@ body {
     &::-webkit-scrollbar {
         display: none;
     }
+
+    &.dark {
+        background-color: $Very-Dark-Blue;
+    }
+
 }

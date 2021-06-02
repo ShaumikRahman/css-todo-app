@@ -1,0 +1,53 @@
+.alt-buttons {
+    @include breakpoint-up(small) {
+        display: none;
+      }
+      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    background-color: $Very-Light-Gray;
+    &.dark {
+      background-color: $Very-Dark-Desaturated-Blue;
+    }
+    padding: 0.5rem 0;
+    border-radius: $radius-value;
+    box-shadow: 0px 4px 2rem 0px rgba(0, 0, 0, 0.15);
+
+    .tracker-button {
+      margin: 0 1px;
+      font-family: $Josefin-Sans;
+      font-size: 0.66rem;
+      opacity: 0.5;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      &.dark {
+        color: $Light-Grayish-Blue;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.active {
+        color: $bright-blue;
+      }
+    }
+  }
+
+  .content-tip {
+    margin-top: 2rem;
+    text-align: center;
+
+    .tip-text {
+      font-size: 0.66rem;
+      opacity: 0.5;
+
+      &.dark {
+        color: $Light-Grayish-Blue;
+      }
+    }
+  }
