@@ -1,4 +1,6 @@
 $radius-value: 0.375rem;
+$transition-speed: 150ms;
+$transition-function: ease-in-out;
 
 * {
     margin: 0;
@@ -11,6 +13,8 @@ body {
     &::-webkit-scrollbar {
         display: none;
     }
+
+    transition: background-color $transition-speed $transition-function;
 
     &.dark {
         background-color: $Very-Dark-Blue;

@@ -52,7 +52,7 @@
       height: 1rem;
       opacity: 0.33;
       cursor: pointer;
-      transition: all 100ms ease-in-out;
+      transition: background-color $transition-speed $transition-function;
 
       &:hover {
         opacity: 1;
@@ -91,6 +91,9 @@
       padding-left: 3rem;
       font-family: $Josefin-Sans;
       word-break: break-all;
+      transition-property: background-color, color;
+      transition-duration: $transition-speed;
+      transition-timing-function: $transition-function;
 
       &.dark {
         background-color: $Very-Dark-Desaturated-Blue;
