@@ -19,7 +19,7 @@ const darkElements = [
     '.header',
     '.symbol',
     '.check',
-    '.search',
+    '.input',
     '.main-wrapper',
     '.content-list',
     '.todo-tracker',

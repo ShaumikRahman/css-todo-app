@@ -16,7 +16,7 @@ main {
   width: 38%;
   transition: all 100ms ease-in-out;
 
-  @import 'title+search';
+  @import 'title+input';
   @import 'list+tracker';
   @import 'altbuttons+tip';
 }
