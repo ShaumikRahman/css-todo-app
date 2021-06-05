@@ -16,6 +16,7 @@ function recheck() {
                 button.nextElementSibling.classList.add('completed');
                 completed.push(button.id);
             }
+            calcRemaining();
             setCompleted();
         });
     });

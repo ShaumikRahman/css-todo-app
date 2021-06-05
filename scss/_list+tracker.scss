@@ -25,6 +25,10 @@
       padding: 0.6875rem 0px;
       border-bottom: 0.25px solid #484b6a2b;
 
+      &.hide {
+        display: none;
+      }
+
       .todo-check {
         position: absolute;
         margin-left: 0.875rem;
@@ -141,7 +145,7 @@
             color: $Light-Grayish-Blue;
           }
 
-        &.active {
+        &.blue {
           color: $bright-blue;
         }
       }
