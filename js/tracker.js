@@ -8,12 +8,12 @@ if (localStorage.getItem('setting').length == 0) {
 
 const trackerButtons = document.querySelectorAll('.tracker-button');
 
-
 checkBlue();
 
 trackerButtons.forEach(button => {
     button.addEventListener('click', () => {
-        setting = button.innerHTML.toLowerCase();
+        // setting = button.innerHTML.toLowerCase();
+        setting = button.classList[1];
         localStorage.setItem('setting', JSON.stringify(setting));
         handleSettingChange();
         checkBlue();
@@ -33,7 +33,28 @@ function checkBlue() {
 
 function handleSettingChange() {
     let todoElements = document.querySelectorAll('.todo');
-    //todo tracker buttons
+    setting = JSON.parse(localStorage.getItem('setting'));
+    if (setting == 'all') {
+      todoElements.forEach(todo => {
+        todo.classList.remove('hide');
+      });
+    } else if (setting == 'active') {
+      todoElements.forEach(todo => {
+        if (todo.firstChild.classList.contains('checked')) {
+          todo.classList.add('hide');
+        } else {
+          todo.classList.remove('hide');
+        }
+      });
+    } else if (setting == 'completed') {
+      todoElements.forEach(todo => {
+        if (!todo.firstChild.classList.contains('checked')) {
+          todo.classList.add('hide');
+        } else {
+          todo.classList.remove('hide');
+        }
+      });
+    }
 }
 
 function calcRemaining() {
